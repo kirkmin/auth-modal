@@ -10,14 +10,15 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'filepicker-rails'
 gem 'jbuilder'
-gem 'sdoc'
 gem 'bootstrap-sass'
 gem 'bcrypt'
 gem 'backbone-on-rails'
 gem 'font-awesome-rails'
 gem 'tzinfo-data'
-gem 'turbolinks'
 
+group :doc do
+  gem 'sdoc', require: false
+end
 
 group :development, :test do
   gem 'byebug'
