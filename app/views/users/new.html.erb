@@ -1,0 +1,13 @@
+<h1>New User</h1>
+
+<form class="sign-up" action="/users" method="post" class="form-signin">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<fieldset>
+		<input id="username" name="user[username]" placeholder="Username" type="text" autofocus>
+		<input id="password" name="user[password]" placeholder="Password" type="password">
+		<input class="btn btn-success btn-block" type="submit" id="sign-up" value="Sign Up »">
+	</fieldset>
+</form>
+
+<%= button_to "log in", new_session_url, method: :get %>
+<%= button_to "sign up", new_user_url, method: :get %>
