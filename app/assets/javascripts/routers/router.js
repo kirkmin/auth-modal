@@ -8,18 +8,15 @@ project.Routers.Router = Backbone.Router.extend({
   },
 
   routes: {
-
+    '': 'index'
   },
 
-  // boardsIndex: function () {
-  //   project.Collections.boards.fetch();
+  index: function () {
 
-  //   var view = new project.Views.BoardsIndex({
-  //     collection: project.Collections.boards
-  //   });
+    var view = new project.Views.Index();
 
-  //   this._swapView(view);
-  // },
+    this._swapView(view);
+  },
 
   _swapView: function (view) {
     this.currentView && this.currentView.remove();

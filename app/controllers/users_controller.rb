@@ -1,7 +1,4 @@
 class UsersController < ApplicationController
-	
-	def new	
-	end
 
 	def create
 		@user = User.new(user_params)
@@ -10,8 +7,8 @@ class UsersController < ApplicationController
 			sign_in!(@user)
 			redirect_to :root
 		else
-			flash.now[:errors] = @user.errors.full_messages
-			render :new
+			# flash.now[:errors] = @user.errors.full_messages
+			redirect_to :root, flash: {errors: @user.errors.full_messages}
 		end
 	end
 
