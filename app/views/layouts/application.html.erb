@@ -7,9 +7,12 @@
  	<%= csrf_meta_tags %>
 </head>
 <body>
-
-	<%= render partial: "layouts/navbar" %>
-	<%= render partial: "layouts/error" %>
+	<div id="nav_grid">
+		<%= render partial: "layouts/navbar" %>
+	</div>
+	<div id="error_grid">
+		<%= render partial: "layouts/error" %>
+	</div>
 	<%= yield %>
 
 </body>

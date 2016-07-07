@@ -8,12 +8,20 @@ project.Routers.Router = Backbone.Router.extend({
   },
 
   routes: {
-    '': 'index'
+    '': 'index',
+    'show': 'show'
   },
 
   index: function () {
 
     var view = new project.Views.Index();
+
+    this._swapView(view);
+  },
+
+  show: function () {
+
+    var view = new project.Views.Show();
 
     this._swapView(view);
   },

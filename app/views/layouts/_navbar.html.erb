@@ -20,7 +20,6 @@
 </nav>
 
 
-<!-- Modal -->
 <div class="modal fade" id="logIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -28,7 +27,7 @@
 	    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	    <h4 class="modal-title" id="myModalLabel">Log In</h4>
 	  </div>
-		<form class="sign-in" action="/session" method="post" class="form-signin">
+		<form class="sign-in" action="/session" method="post" data-remote="true" class="form-signin">
 	      <div class="modal-body">
 				<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 				<input id="username" name="user[username]" placeholder="Username" type="text" autofocus>
@@ -43,7 +42,6 @@
   </div>
 </div>
 
-<!-- Modal -->
 <div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -52,7 +50,7 @@
         <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
       </div>
       <div class="modal-body">
-		<form class="sign-up" action="/users" method="post" class="form-signin">
+		<form class="sign-up" action="/users" method="post" data-remote="true" class="form-signin">
 			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 			<input id="username" name="user[username]" placeholder="Username" type="text" autofocus>
 			<input id="password" name="user[password]" placeholder="Password" type="password">
