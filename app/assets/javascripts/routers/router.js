@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 project.Routers.Router = Backbone.Router.extend({
   initialize: function() {
     // var dropDownView = new project.Views.DropDownView({
@@ -32,39 +31,4 @@ project.Routers.Router = Backbone.Router.extend({
     this.currentView = view;
     this.$rootEl.html(view.render().$el);
   }
-=======
-project.Routers.Router = Backbone.Router.extend({
-  initialize: function() {
-    // var dropDownView = new project.Views.DropDownView({
-    //   collection: project.Collections.boards
-    // });
-    // $('#add-dropdown').append(dropDownView.render().$el);
-    this.$rootEl = $('#main');
-  },
-
-  routes: {
-    '': 'index',
-    'show': 'show'
-  },
-
-  index: function () {
-
-    var view = new project.Views.Index();
-
-    this._swapView(view);
-  },
-
-  show: function () {
-
-    var view = new project.Views.Show();
-
-    this._swapView(view);
-  },
-
-  _swapView: function (view) {
-    this.currentView && this.currentView.remove();
-    this.currentView = view;
-    this.$rootEl.html(view.render().$el);
-  }
->>>>>>> 9486b4860f23603e208181d96ccaf3a972806474
 });

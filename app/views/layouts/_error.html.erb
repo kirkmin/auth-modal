@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 <% if flash[:errors] %>
   <div class="alert alert-warning alert-dismissible" role="alert">
     <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
     <%= flash[:errors].join("<br>").html_safe %>
   </div>
-=======
-<% if flash[:errors] %>
-  <div class="alert alert-warning alert-dismissible" role="alert">
-    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-    <%= flash[:errors].join("<br>").html_safe %>
-  </div>
->>>>>>> 9486b4860f23603e208181d96ccaf3a972806474
 <% end %>
