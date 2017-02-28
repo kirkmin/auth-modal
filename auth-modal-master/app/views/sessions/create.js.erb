@@ -1,0 +1,9 @@
+<% if @user %>
+	project.currentUserId = <%= @user.id %>
+	$(document).trigger('data-attribute-changed');
+	$('.modal-backdrop').remove();
+	$("#nav_grid").html("<%= escape_javascript(render partial: 'layouts/navbar') %>");
+<% else %>
+	$("#logIn").modal("hide")
+	$("#error_grid").html("<%= escape_javascript(render partial: 'layouts/error') %>");
+<% end %>
